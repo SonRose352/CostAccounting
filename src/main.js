@@ -27,4 +27,4 @@ const expenseListPresenter = new ExpenseListPresenter({
   tasksModel: tasksModel
 });
 
-tasksModel.init();
+expenseListPresenter.init();

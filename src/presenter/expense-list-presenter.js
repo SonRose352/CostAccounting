@@ -15,6 +15,7 @@ export default class ExpenseListPresenter {
     this.#boardContainer = boardContainer;
     this.#tasksModel = tasksModel;
     this.#tasksModel.addObserver(this.#handleModelEvent);
+    this.#expenseListComponent = new ExpenseListComponent();
   }
 
   get tasks() {
@@ -31,7 +32,6 @@ export default class ExpenseListPresenter {
   }
 
   #renderBoard() {
-    this.#expenseListComponent = new ExpenseListComponent();
     render(this.#expenseListComponent, this.#boardContainer);
     this.#renderTasks();
   }

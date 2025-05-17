@@ -6,7 +6,7 @@ export default class ItemModel extends Observable {
 
   async init() {
     try {
-      this.#boardTasks = items;
+      this.#boardTasks = [...items];
       this._notify('init', this.#boardTasks);
     } catch(err) {
       this.#boardTasks = [];
